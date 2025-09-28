@@ -13,6 +13,7 @@ Air Quality API - Flask Backend
 Original workflow: Webhook -> Geocoding -> AQI Data -> AI Insights -> Response
 """
 
+import os
 import requests
 import json
 import sys
