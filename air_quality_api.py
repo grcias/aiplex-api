@@ -183,6 +183,11 @@ CORS(app)
 api = AirQualityAPI()
 
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"status": "Air Quality API is running 🚀"})
+
+
 @app.route("/air-quality", methods=["POST"])
 def air_quality_webhook():
     data = request.get_json()
