@@ -24,9 +24,9 @@ from flask_cors import CORS
 class AirQualityAPI:
     def __init__(self):
         # API Keys (replace with your actual keys)
-        self.airvisual_api_key = "ca06075f-c0f6-4de7-894d-9b3a5cf200ac"
-        self.ninja_api_key = "Jd4Fdp8xahuKqHheeJJy8A==qz7BNKshLahRnChP"
-        self.gemini_api_key = "AIzaSyA5JwWOkL0iL8m2y9I4lMM-Fxfe2GZlCwc"
+        self.airvisual_api_key = os.getenv("AIRVISUAL_API_KEY")
+        self.ninja_api_key = os.getenv("NINJA_API_KEY")
+        self.gemini_api_key = os.getenv("GEMINI_API_KEY")
 
         # API Endpoints
         self.nominatim_url = "https://nominatim.openstreetmap.org/search"
