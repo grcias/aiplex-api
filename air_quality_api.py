@@ -102,7 +102,7 @@ class AirQualityAPI:
                                     f"'fun_fact', and 'challenge' based on this air quality "
                                     f"category: {category}. "
                                     f"'tip': start with a friendly phrase (like 'Hey' or 'Reminder'), "
-                                    f"mention the {category} explicitly, give clear advice, max 15 words. "
+                                    f"mention the {category} explicitly, give clear advice, max 12 words. "
                                     f"'fun_fact': write in style 'Did you know? ...', interesting and positive, "
                                     f"1-2 sentences, include 1-2 fun emojis. "
                                     f"'challenge': write as a small daily task the user can do, "
