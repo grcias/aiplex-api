@@ -151,19 +151,20 @@ class AirQualityAPI:
         insights = self.generate_ai_insights(category)
 
         response_data = {
-            "success": True,
-            "city": airvisual_data["data"]["city"],
-            "country": airvisual_data["data"]["country"],
-            "coords": coords,
-            "aqi": aqi_value,
-            "category": category,
-            "weather": {
-                "temp": airvisual_data["data"]["current"]["weather"]["tp"],
-                "humidity": airvisual_data["data"]["current"]["weather"]["hu"],
-                "wind": airvisual_data["data"]["current"]["weather"]["ws"],
-            },
-            "insight": insights,
-        }
+        "success": True,
+        "city": airvisual_data["data"]["city"],
+        "country": airvisual_data["data"]["country"],
+        "coords": coords,
+        "aqi": aqi_value,
+        "category": category,
+        "weather": {
+        "temp": airvisual_data["data"]["current"]["weather"]["tp"],
+        "humidity": airvisual_data["data"]["current"]["weather"]["hu"],
+        "wind_ms": airvisual_data["data"]["current"]["weather"]["ws"],  
+        "wind_kmh": round(airvisual_data["data"]["current"]["weather"]["ws"] * 3.6, 1)  
+    },
+        "insight": insights,
+}
 
         if pollutant_data:
             response_data["pollutants"] = {
