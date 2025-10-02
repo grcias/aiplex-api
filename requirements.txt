@@ -2,6 +2,7 @@ flask
 flask-cors
 requests
 gunicorn
+sckit-learn
 python-dotenv
 numpy
 pandas
