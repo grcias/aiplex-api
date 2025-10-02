@@ -1,1 +1,0 @@
-web: gunicorn air_quality_api:app

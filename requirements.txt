@@ -2,3 +2,7 @@ flask
 flask-cors
 requests
 gunicorn
+python-dotenv
+numpy
+pandas
+prophet
